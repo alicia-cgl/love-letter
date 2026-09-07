@@ -4,13 +4,13 @@ import "math/rand/v2"
 
 type card struct {
 	name   string
-	value  int
+	power  int
 	effect func()
 }
 
-func addCards(deck []card, name string, value int, effect func(), n int) []card {
+func addCards(deck []card, name string, power int, effect func(), n int) []card {
 	for i := 0; i < n; i++ {
-		deck = append(deck, card{name, value, effect})
+		deck = append(deck, card{name, power, effect})
 	}
 	return deck
 }
